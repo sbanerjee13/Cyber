@@ -1,0 +1,6 @@
+name: CyberPlugin
+version: ${project.version}
+main: com.cyberdev.cyberplugin.CyberPlugin
+api-version: 1.13
+authors: [sentosa]
+description: private cyber plugin
