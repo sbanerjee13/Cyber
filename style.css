@@ -1,0 +1,43 @@
+@font-face {
+    font-family: neonFont;
+    src: url(neonavy.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url("./background.jpg");
+    background-size: cover;
+}
+
+#title {
+    font-family: neonFont, Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 120px;
+    letter-spacing: 7px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    user-select: none;
+}
+
+.glow {
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+  
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 45px #e60073, 0 0 50px #e60073, 0 0 60px #e60073;
+    }
+    to {
+      text-shadow: 0 0 30px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+}
