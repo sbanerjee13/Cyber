@@ -8,6 +8,7 @@ public final class CyberPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
+        System.out.println("Enabling Cyber... ensure that Vault/Economy APIs are accessible...");
 
         // handle commands
         getCommand("credits").setExecutor(new credits());
@@ -16,5 +17,6 @@ public final class CyberPlugin extends JavaPlugin {
     @Override
     public void onDisable() {
         // Plugin shutdown logic
+        System.out.println("Disabling Cyber...");
     }
 }
