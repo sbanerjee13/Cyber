@@ -8,10 +8,10 @@ public final class CyberPlugin extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
 
-    }
+        // events
+        getServer().getPluginManager().registerEvents(new InfiltratorItemEvent(), this);
 
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
+        // commands
+        getCommand("inf").setExecutor(new InfiltratorItemCommand());
     }
 }

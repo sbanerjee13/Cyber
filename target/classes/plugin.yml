@@ -1,5 +1,5 @@
 name: CyberPlugin
-version: ${project.version}
+version: 1.0-SNAPSHOT
 main: com.cyberdev.cyberplugin.CyberPlugin
 api-version: 1.13
 authors: [sentosa]
