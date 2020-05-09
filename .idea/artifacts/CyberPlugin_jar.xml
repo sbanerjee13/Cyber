@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="CyberPlugin:jar">
+    <output-path>$USER_HOME$/Desktop/server/plugins</output-path>
+    <root id="archive" name="CyberPlugin.jar">
+      <element id="module-output" name="CyberPlugin" />
+    </root>
+  </artifact>
+</component>

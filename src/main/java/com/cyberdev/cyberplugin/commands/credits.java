@@ -11,7 +11,7 @@ public class credits implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args){
 
         if(sender instanceof Player){
-            sender.sendMessage(ChatColor.GREEN + "Plugin devs: @sentosa, @icedjuro, @felipe");
+            sender.sendMessage(ChatColor.GREEN + "Plugin developed by: @sentosa, @icedjuro, @felipe");
         }
 
         return false;
