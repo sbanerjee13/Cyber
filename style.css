@@ -21,11 +21,50 @@ body {
     font-size: 120px;
     letter-spacing: 7px;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     user-select: none;
+}
+
+nav {
+    width: 100vw;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    top: 70vh;
+}
+
+.link{
+    text-decoration: none;
+    color: #fff;
+    line-height: 8vh;
+    font-size: 30px;
+}
+
+.link div{
+    width:12vw;
+    min-width: 8vh;
+    height: 8vh;
+    background-color: #000;
+    border-radius: 20px;
+    text-align: right;
+    position: relative;
+    margin: 0 50px 0 50px;
+}
+
+.link div i {
+    position: absolute;
+    left: 20px;
+    line-height: 8vh;
+}
+
+.link div p {
+    position: absolute;
+    right: 15%;
 }
 
 .glow {
@@ -43,9 +82,31 @@ body {
     }
 }
 
+.glowdiv {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60073, 0 0 20px #e60073, 0 0 25px #e60073, 0 0 27px #e60073, 0 0 30px #e60073;
+}
+
+.glowdiv:hover {
+    -webkit-animation: glowdiv 1s ease-in-out infinite alternate;
+    -moz-animation: glowdiv 1s ease-in-out infinite alternate;
+    animation: glowdiv 1s ease-in-out infinite alternate;
+}
+
+@keyframes glowdiv {
+    from {
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60073, 0 0 20px #e60073, 0 0 25px #e60073, 0 0 27px #e60073, 0 0 30px #e60073;
+    }
+    to {
+      box-shadow: 0 0 30px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+}
+
 @media (max-width: 1300px) {
     #title{
-        font-size: 4rem;
+        font-size: 4rem;  
+    }
+    .link{
+        font-size:20px;
     }
 }
 
@@ -58,6 +119,19 @@ body {
 @media (max-width: 1110px) {
     body {
         background-size: 175%;
+    }
+    .link div p {
+        display: none;
+    }
+    .link div{
+        text-align: center;
+    }
+    .link div i{
+        left: 0;
+        right: 0;
+    }
+    .link{
+        font-size:30px;
     }
 }
 
