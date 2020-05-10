@@ -12,6 +12,7 @@
 body {
     background-image: url("./background.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #title {
@@ -39,5 +40,29 @@ body {
     }
     to {
       text-shadow: 0 0 30px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+}
+
+@media (max-width: 1300px) {
+    #title{
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 660px) {
+    #title{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1110px) {
+    body {
+        background-size: 175%;
+    }
+}
+
+@media (max-width: 680px) {  
+    body {
+        background-size: 390%;
     }
 }
