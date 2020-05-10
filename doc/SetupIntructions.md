@@ -2,7 +2,7 @@
 
 These are instructions on how to setup a development environment for working on Cyberworld.
 
-Note: If you need any help with the setup, you can join our [discord server](www.discord.gg/5MyGWRD).
+Note: If you need any help with the setup, you can join our [discord server](https://discord.gg/wcQjkeG).
 
 Extra note: Setup instructions are only made for Windows currently.
 
