@@ -47,13 +47,6 @@ body {
     padding-top: 10rem;
 }
 
-@media (max-width: 750px) {
-    .title-h {
-        font-size: 3rem;
-        letter-spacing: 0.5rem;
-    }
-}
-
 /* Title Animation */
 
 span {
@@ -110,4 +103,28 @@ span.cursor {
 .a-button:hover {
     text-shadow:#ff005b 5px 0 10px;
     color: #ff005b;
+}
+
+/* MEDIA */
+
+@media (max-width: 750px) {
+    .title-h {
+        font-size: 2.5rem;
+        letter-spacing: 0.5rem;
+    }
+
+    .a-button {
+        font-family: Blender;
+        font-size: 1.4rem;
+        color: white;
+        text-decoration: none;
+        margin: 0px 50px;
+        transition: all 0.5s ease;
+    }
+
+    .blurb-h {
+        font-family: Blender;
+        color: white;
+        font-size: 0.7rem;
+    }
 }
