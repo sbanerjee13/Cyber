@@ -1,142 +1,113 @@
+/* INTRO */
+
 @font-face {
-    font-family: neonFont;
-    src: url(neonavy.ttf);
+    font-family: Blender;
+    src: url("font/Blender-Pro-Bold.otf") format("opentype");
 }
 
 * {
     margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    background-image: url("./background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: #434B63;
+    overflow-y: scroll;
+    background-image: url('img/background.jpg');
+    box-shadow: inset 100px 100px 1000px black;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+}
+
+/* Main Content */
+
+#main-wrapper {
+    width: 100vw;
+    height: 100vh;
 }
 
 #title {
-    font-family: neonFont, Arial, Helvetica, sans-serif;
-    color: #fff;
-    font-size: 120px;
-    letter-spacing: 7px;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.title-h {
+    color: white;
+    font-family: Blender;
+    font-size: 8rem;
+    text-shadow: 0 0 20px #ff005b;
+    /* letter-spacing: 1rem; */
     user-select: none;
+    padding-top: 10rem;
 }
 
-nav {
-    width: 100vw;
-    height: 8vh;
+@media (max-width: 750px) {
+    .title-h {
+        font-size: 3rem;
+        letter-spacing: 0.5rem;
+    }
+}
+
+/* Title Animation */
+
+span {
+    opacity: 0;
+}
+
+span.text {
+    transition: all 1s ease;
+}
+
+span.fade {
+    opacity: 1;
+}
+
+span.cursor {
+    opacity: 1;
+}
+
+/* BLURB */
+
+#blurb {
+    text-align: center;
+    margin-top: 8vh;
+}
+
+.blurb-h {
+    font-family: Blender;
+    color: white;
+}
+
+/* CONTENT */
+
+#content-wrapper {
+    margin-top: 10rem;
+}
+
+.buttons {
     display: flex;
-    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    position: absolute;
-    top: 70vh;
+    flex-direction: row;
+    padding: 0px 50px;
 }
 
-.link{
+.a-button {
+    font-family: Blender;
+    font-size: 1.7rem;
+    color: white;
     text-decoration: none;
-    color: #fff;
-    line-height: 8vh;
-    font-size: 30px;
+    margin: 0px 100px;
+    transition: all 0.5s ease;
 }
 
-.link div{
-    width:12vw;
-    min-width: 8vh;
-    height: 8vh;
-    background-color: #000;
-    border-radius: 20px;
-    text-align: right;
-    position: relative;
-    margin: 0 50px 0 50px;
-}
-
-.link div i {
-    position: absolute;
-    left: 20px;
-    line-height: 8vh;
-}
-
-.link div p {
-    position: absolute;
-    right: 15%;
-}
-
-.glow {
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
-}
-  
-@keyframes glow {
-    from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 45px #e60073, 0 0 50px #e60073, 0 0 60px #e60073;
-    }
-    to {
-      text-shadow: 0 0 30px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-    }
-}
-
-.glowdiv {
-    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60073, 0 0 20px #e60073, 0 0 25px #e60073, 0 0 27px #e60073, 0 0 30px #e60073;
-}
-
-.glowdiv:hover {
-    -webkit-animation: glowdiv 1s ease-in-out infinite alternate;
-    -moz-animation: glowdiv 1s ease-in-out infinite alternate;
-    animation: glowdiv 1s ease-in-out infinite alternate;
-}
-
-@keyframes glowdiv {
-    from {
-      box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60073, 0 0 20px #e60073, 0 0 25px #e60073, 0 0 27px #e60073, 0 0 30px #e60073;
-    }
-    to {
-      box-shadow: 0 0 30px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-    }
-}
-
-@media (max-width: 1300px) {
-    #title{
-        font-size: 4rem;  
-    }
-    .link{
-        font-size:20px;
-    }
-}
-
-@media (max-width: 660px) {
-    #title{
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 1110px) {
-    body {
-        background-size: 175%;
-    }
-    .link div p {
-        display: none;
-    }
-    .link div{
-        text-align: center;
-    }
-    .link div i{
-        left: 0;
-        right: 0;
-    }
-    .link{
-        font-size:30px;
-    }
-}
-
-@media (max-width: 680px) {  
-    body {
-        background-size: 390%;
-    }
+.a-button:hover {
+    text-shadow:#ff005b 5px 0 10px;
+    color: #ff005b;
 }
