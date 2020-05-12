@@ -47,24 +47,25 @@ let timer = setInterval(onTick, 220);
 function flicker() {
     const letters = document.querySelectorAll('.text');
     letters.forEach(letter => {
-        changeFlicker(letter);
+        addFlicker(letter);
     });
 }
 
-function changeFlicker(letter) {
-    letter.classList.remove("text");
-    let flickerNum;
-    let flickerDuration = 0;
+function addFlicker(letter) {
+    letter.classList.remove("text"); // Removes the transition property
+    let chanceToTurnOff;
+    let turnedOffDuration = 0;
     window.setInterval(function(){
-        flickerNum = Math.floor(Math.random() * 70);
-        if(flickerDuration != 0) {
-            letter.dying++;
+        chanceToTurnOff = Math.floor(Math.random() * 70);
+
+        if(turnedOffDuration != 0) {
+            letter.lifeCycle++;
             glitchOut(letter);
-            flickerDuration--;
-        } else if (flickerNum == 0) {
-            letter.dying = 1;
+            turnedOffDuration--;
+        } else if (chanceToTurnOff == 0) {
+            letter.lifeCycle = 1;
             glitchOut(letter);
-            flickerDuration = Math.floor(Math.random() * 5) + 10;
+            turnedOffDuration = Math.floor(Math.random() * 5) + 10;
         } else {
             letter.style.opacity = 1;
         }
@@ -72,7 +73,7 @@ function changeFlicker(letter) {
 }
 
 function glitchOut(letter) {
-    if(letter.dying != 2)
+    if(letter.lifeCycle != 2)
     letter.style.opacity = 0.2;
     else
     letter.style.opacity = 0.5;
