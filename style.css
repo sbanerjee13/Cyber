@@ -5,6 +5,11 @@
     src: url("font/Blender-Pro-Bold.otf") format("opentype");
 }
 
+@font-face {
+    font-family: BlenderProBook;
+    src: url("font/Blender-Pro-Book.otf") format("opentype");
+}
+
 * {
     margin: 0;
 }
@@ -75,6 +80,7 @@ span.cursor {
 .blurb-h {
     font-family: Blender;
     color: white;
+    user-select: none;
 }
 
 /* CONTENT */
@@ -89,6 +95,7 @@ span.cursor {
     justify-content: center;
     flex-direction: row;
     padding: 0px 50px;
+    user-select: none;
 }
 
 .a-button {
@@ -103,6 +110,23 @@ span.cursor {
 .a-button:hover {
     text-shadow:#ff005b 5px 0 10px;
     color: #ff005b;
+}
+
+/* FOOTER LICENSE */
+
+#footer-wrapper{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer {
+    font-family: BlenderProBook;
+    color: white;
+    padding: 10px;
+    font-size: 0.7rem;
+    user-select: none;
 }
 
 /* MEDIA */

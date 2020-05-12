@@ -10,11 +10,7 @@ for(let i = 0; i < splitText.length; i++){
     }
 }
 
-let char = 0;
-let counter = 0;
-const cursorEndCondition = 7;
-
-let timer = setInterval(onTick, 220);
+// initial "type" effect
 
 function onTick() {
     if(counter < cursorEndCondition){
@@ -40,3 +36,10 @@ function complete() {
     clearInterval(timer);
     timer = null;
 }
+
+let char = 0;
+let counter = 0;
+const cursorEndCondition = 7;
+
+let timer = setInterval(onTick, 220);
+
