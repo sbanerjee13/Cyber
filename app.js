@@ -35,6 +35,7 @@ function onTick() {
 function complete() {
     clearInterval(timer);
     timer = null;
+    setTimeout(flicker, 1000);
 }
 
 let char = 0;
@@ -43,3 +44,36 @@ const cursorEndCondition = 7;
 
 let timer = setInterval(onTick, 220);
 
+function flicker() {
+    const letters = document.querySelectorAll('.text');
+    letters.forEach(letter => {
+        changeFlicker(letter);
+    });
+}
+
+function changeFlicker(letter) {
+    letter.classList.remove("text");
+    let flickerNum;
+    let flickerDuration = 0;
+    window.setInterval(function(){
+        flickerNum = Math.floor(Math.random() * 70);
+        if(flickerDuration != 0) {
+            letter.dying++;
+            glitchOut(letter);
+            flickerDuration--;
+        } else if (flickerNum == 0) {
+            letter.dying = 1;
+            glitchOut(letter);
+            flickerDuration = Math.floor(Math.random() * 5) + 10;
+        } else {
+            letter.style.opacity = 1;
+        }
+    }, 100);
+}
+
+function glitchOut(letter) {
+    if(letter.dying != 2)
+    letter.style.opacity = 0.2;
+    else
+    letter.style.opacity = 0.5;
+}
